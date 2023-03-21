@@ -23,8 +23,8 @@ createBoard()
 
 function addTurn(event) {
     // console.log(event.target)
-    // if (!cellElement.classList.contains("circle")) {
+    // if (!cellElement.classList.contains("frog")) {
         const turnDisplay = document.createElement("div")
-        turnDisplay.classList.add("circle")
+        turnDisplay.classList.add("frog")
         event.target.append(turnDisplay)
     }

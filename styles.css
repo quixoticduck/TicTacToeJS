@@ -7,37 +7,90 @@ body {
     height: 100vh;
     flex-direction: column;
     background-color: rgb(27, 19, 68);
+    background-image: url(img/plaid.png);
+}
+
+header {
+    position: absolute;
+    /* display: block; */
+    /* box-sizing: border-box; */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 68px;
+    background-color: #FAEDE1;
+    padding: 0.3rem;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #58B59D;
+    font-size: 2.5rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 2px rgba(0, 0, 0, 0.377);
+    margin: auto;
+    text-align: center;
+    padding: 0.3rem;
 }
 
 #gameboard {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
+    margin-top: 7rem;
     /* background-color: rgb(27, 19, 68); */
     display: flex;
     flex-wrap: wrap;
-    border: solid 5px;
-    border-color: rgb(27, 19, 68);
+    border: 15px solid;
+    border-color:#FAEDE1;
+    box-shadow: 2px 2px 2px #D7729B, -2px -2px 2px #58B59D, inset -2px 2px 2px #57A32C, inset 2px -2px 2px #F9D840;
 }
 
 .square {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(227, 219, 268);
-    border: solid 5px;
-    border-color: rgb(27, 19, 68);
+    width: 180px;
+    height: 180px;
+    background-color: #FAEDE1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 2px rgba(0, 0, 0, 0.377);
+    transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+    /* border: 20px solid transparent; */
+    /* border-color: yellow; */
     box-sizing: border-box;
     display: flex;
     justify-items: center;
     align-items: center;
+    margin: auto;
 }
 
-.circle {
-    height: 90px;
-    width: 90px;
+.square:hover {
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.frog {
+    height: 150px;
+    width: 150px;
+    /* border-radius: 50%; */
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url(img/frog150px.png);
+    background-repeat: no-repeat;
+}
+
+.duck {
+    height: 150px;
+    width: 150px;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url(img/chick150px.png);
+    background-repeat: no-repeat;
+}
+
+
+/* .circle {
+    height: 164px;
+    width: 164px;
     border-radius: 50%;
     box-sizing: border-box;
-    border: 15px solid rgb(27, 19, 68);
-}
+    border: 30px solid rgb(27, 19, 68);
+    margin: auto;
+} */
 
 .cross {
     height: 90px;
