@@ -28,6 +28,6 @@ function addTurn(event) {
     // console.log(event.target)
     // if (!cellElement.classList.contains("frog")) {
         const turnDisplay = document.createElement("div")
-        turnDisplay.classList.add("frog")
+        turnDisplay.classList.add(turn)
         event.target.append(turnDisplay)
     }
