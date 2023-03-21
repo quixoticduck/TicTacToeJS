@@ -10,6 +10,8 @@ const startCells = [
 
 let turn = "frog"
 infoDisplay.textContent = "Frog goes first"
+// infoDisplay.textContent = "FROG GOES FIRST"
+// const uppercase = infoDisplay.toUpperCase()
 
 function createBoard() {
     //for each cell in the board, create a div element
@@ -33,4 +35,19 @@ function addTurn(event) {
         turnDisplay.classList.add(turn)
         event.target.append(turnDisplay)
         event.target.classList.add("clicked")
+        turn = turn === "frog" ? "duck" : "frog"
+        infoDisplay.textContent = "It is now " + turn + "'s turn!"
+        checkScore()
+        // string.toUpperCase(infoDisplay.textContent)
     }
+
+    // functionCheckScore() {
+    //     const allSquares = document.querySelectorAll(".square")
+    //     const winningCombos = [
+    //         [0,1,2], [0,4,8], [0,3,6]
+    //     ]
+    //     winningCombos.forEach(array => {
+    //         array.every(cell =>
+    //             allSquares[cell].firstChild?.classList.contains("frog"))
+    //     }
+    // }
