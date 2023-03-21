@@ -6,6 +6,8 @@ const startCells = [
     "", "", ""
 ]
 
+// let clickedSquare = 0;
+
 let turn = "frog"
 infoDisplay.textContent = "Frog goes first"
 
@@ -30,4 +32,5 @@ function addTurn(event) {
         const turnDisplay = document.createElement("div")
         turnDisplay.classList.add(turn)
         event.target.append(turnDisplay)
+        event.target.classList.add("clicked")
     }
