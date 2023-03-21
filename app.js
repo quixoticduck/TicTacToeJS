@@ -8,13 +8,23 @@ const startCells = [
 
 function createBoard() {
     //for each cell in the board, create a div element
-    startCells.forEach((cell, index) => {
+    //underscore before 'cell' tells our code that it is not being used
+    startCells.forEach((_cell, index) => {
         const cellElement = document.createElement("div")
     //add the class of square to them
         cellElement.classList.add("square")
+        cellElement.id = index
+        cellElement.addEventListener("click", addTurn)
         gameBoard.append(cellElement)
     })
 }
 
 createBoard()
-console.log("hello");
+
+function addTurn(event) {
+    // console.log(event.target)
+    // if (!cellElement.classList.contains("circle")) {
+        const turnDisplay = document.createElement("div")
+        turnDisplay.classList.add("circle")
+        event.target.append(turnDisplay)
+    }
