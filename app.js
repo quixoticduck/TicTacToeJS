@@ -6,6 +6,9 @@ const startCells = [
     "", "", ""
 ]
 
+let turn = "frog"
+infoDisplay.textContent = "Frog goes first"
+
 function createBoard() {
     //for each cell in the board, create a div element
     //underscore before 'cell' tells our code that it is not being used
