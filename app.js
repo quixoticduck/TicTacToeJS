@@ -1,4 +1,4 @@
-const gameBoard = document.querySelector("#gameboard")
+const gameBoard = document.querySelector("#gameboard-container")
 const infoDisplay = document.querySelector("#info")
 const startCells = [
     "", "", "", 
