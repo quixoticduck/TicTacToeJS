@@ -41,13 +41,34 @@ function addTurn(event) {
         // string.toUpperCase(infoDisplay.textContent)
     }
 
-    // functionCheckScore() {
-    //     const allSquares = document.querySelectorAll(".square")
-    //     const winningCombos = [
-    //         [0,1,2], [0,4,8], [0,3,6]
-    //     ]
-    //     winningCombos.forEach(array => {
-    //         array.every(cell =>
-    //             allSquares[cell].firstChild?.classList.contains("frog"))
-    //     }
-    // }
+    function checkScore() {
+        const allSquares = document.querySelectorAll(".square")
+        const winningCombos = [
+            [0,1,2], [0,4,8], [0,3,6], [1,4,7], [2,4,6], [2,5,8], [3,4,5], [6,7,8]
+        ]
+
+        // console.log(allSquares[0]);
+
+    winningCombos.forEach(array => {
+        const froggyWins = array.every(cell =>
+            allSquares[cell].firstChild?.classList.contains("frog"))
+
+        if (froggyWins) {
+            infoDisplay.textContent = "Froggy wins!"
+            allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+            return
+                }
+        })
+
+
+    winningCombos.forEach(array => {
+        const duckyWins = array.every(cell =>
+            allSquares[cell].firstChild?.classList.contains("duck"))
+
+        if (duckyWins) {
+            infoDisplay.textContent = "Ducky wins!"
+            allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
+            return
+                }
+        })
+    }
