@@ -8,8 +8,8 @@ const startCells = [
 
 // let clickedSquare = 0;
 
-let turn = "frog"
-infoDisplay.textContent = "Frog goes first"
+let turn = "froggy"
+infoDisplay.textContent = "Froggy goes first"
 // infoDisplay.textContent = "FROG GOES FIRST"
 // const uppercase = infoDisplay.toUpperCase()
 
@@ -35,8 +35,8 @@ function addTurn(event) {
         turnDisplay.classList.add(turn)
         event.target.append(turnDisplay)
         event.target.classList.add("clicked")
-        turn = turn === "frog" ? "duck" : "frog"
-        infoDisplay.textContent = "It is now " + turn + "'s turn!"
+        turn = turn === "froggy" ? "ducky" : "froggy"
+        infoDisplay.textContent = "It's " + turn + "'s turn!"
         checkScore()
         // string.toUpperCase(infoDisplay.textContent)
     }
@@ -51,7 +51,7 @@ function addTurn(event) {
 
     winningCombos.forEach(array => {
         const froggyWins = array.every(cell =>
-            allSquares[cell].firstChild?.classList.contains("frog"))
+            allSquares[cell].firstChild?.classList.contains("froggy"))
 
         if (froggyWins) {
             infoDisplay.textContent = "Froggy wins!"
@@ -63,10 +63,10 @@ function addTurn(event) {
 
     winningCombos.forEach(array => {
         const duckyWins = array.every(cell =>
-            allSquares[cell].firstChild?.classList.contains("duck"))
+            allSquares[cell].firstChild?.classList.contains("ducky"))
 
         if (duckyWins) {
-            infoDisplay.textContent = "Ducky wins!"
+            infoDisplay.textContent = "Ducky wins!!"
             allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
             return
                 }
