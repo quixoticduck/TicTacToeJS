@@ -29,16 +29,25 @@ function createBoard() {
 createBoard()
 
 function addTurn(event) {
-    // console.log(event.target)
-    // if (!cellElement.classList.contains("frog")) {
-        const turnDisplay = document.createElement("div")
-        turnDisplay.classList.add(turn)
-        event.target.append(turnDisplay)
-        event.target.classList.add("clicked")
-        turn = turn === "froggy" ? "ducky" : "froggy"
-        infoDisplay.textContent = "It's " + turn + "'s turn!"
-        checkScore()
-        // string.toUpperCase(infoDisplay.textContent)
+
+    const clickedElement = event.target
+
+    console.log(clickedElement.classList)
+    if (
+        clickedElement.classList.contains("clicked") 
+        || clickedElement.parentNode.classList.contains("clicked")
+    )  {
+        return
+    }
+
+    const turnDisplay = document.createElement("div")
+    turnDisplay.classList.add(turn)
+    clickedElement.append(turnDisplay)
+    clickedElement.classList.add("clicked")
+    turn = turn === "froggy" ? "ducky" : "froggy"
+    infoDisplay.textContent = "It's " + turn + "'s turn!"
+    checkScore()
+    // string.toUpperCase(infoDisplay.textContent)
     }
 
     function checkScore() {

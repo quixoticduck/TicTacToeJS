@@ -12,8 +12,8 @@ body {
     align-items: center;
     height: 100vh;
     /* flex-direction: column; */
-    background-image: url(https://www.dropbox.com/s/b1xg6rm69useb0q/plaid.png?dl=1);
-    background-image: url(img/plaid.png);
+    background-image: url(https://www.claraalder.com/assets/img/HOSTED/plaid.png);
+    /* background-image: url(img/plaid.png); */
 }
 
 /* .break {
@@ -171,6 +171,8 @@ header {
     display: grid;
     /* grid-template-rows: 1fr;
     grid-template-columns: 1fr; */
+    //fixes safari issue of hover breaking image
+    width: 94%;
 }
 
 .square:hover {
@@ -180,7 +182,7 @@ header {
 
 .square:active {
     background-color: #FAEDE1;
-    background-size: 100%;
+    background-size: 101%;
     transition: background 0s;
   }
 
@@ -196,7 +198,7 @@ header {
     width: 84%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: 101% 101%;
     box-sizing: border-box;
     margin: auto;
     animation: fadeIn 0.5s; 
@@ -209,17 +211,26 @@ img {max-width:100%;}
     100% { opacity: 1; }
   }
 
+  .preload {
+    //froggy
+    background-image: url(https://www.claraalder.com/assets/img/HOSTED/frog154px.png);
+  }
+
+  // .preload-2 {
+    //   //ducky
+    //     background-image: url(https://www.claraalder.com/assets/img/HOSTED/duckAgreen154px.png);
+    // }
+
+
 .froggy {
-    background-image: url(https://www.dropbox.com/s/avltn18bf19as5x/frog154px.png?dl=1);
-    background-image: url(img/frog154px.png);
+    background-image: url(https://www.claraalder.com/assets/img/HOSTED/frog154px.png);
+    /* background-image: url(img/frog154px.png); */
 }
 
 .ducky {
-    background-image: url(https://www.dropbox.com/s/8d0ly8xlx3ys3rh/chick154px.png?dl=1);
-    background-image: url(https://www.dropbox.com/s/hg1htfxf3em34cy/duckAgreen154px.png?dl=1);
-    background-image: url(https://www.dropbox.com/s/ge447unxfnlzysa/duckB154px.png?dl=1);
-    background-image: url(img/chick154px.png);
-    background-image: url(img/duckAgreen154px.png);
+    background-image: url(https://www.claraalder.com/assets/img/HOSTED/duckAgreen154px.png);
+    /* background-image: url(img/chick154px.png);
+    background-image: url(img/duckAgreen154px.png); */
     /* background-image: url(img/duckB154px.png); */
 }
 
